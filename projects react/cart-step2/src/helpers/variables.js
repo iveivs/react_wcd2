@@ -1,0 +1,1 @@
+export const serverPath = 'https://wise-mysterious-vanilla.glitch.me/'
