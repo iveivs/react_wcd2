@@ -3,10 +3,12 @@ import Form from '../Form';
 import Header from '../Header';
 import Tab from "../Tab";
 import Edit from "../Edit";
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-
+import {HashRouter as Router, Routes, Route} from 'react-router-dom'
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 function App() {
+
   return (
     <div className="App">
       <Router>

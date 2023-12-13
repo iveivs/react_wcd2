@@ -40,10 +40,10 @@ const Edit = () => {
 									</div>
 
 									<div className="row mb-3">
-										<div clclassNameass="col-md-2">
+										<div className="col-md-2">
 											<strong>Продукт:</strong>
 										</div>
-										<div claclassNamess="col">
+										<div className="col">
 											<select id="product" name="product" className="custom-select" >
 												<option value="course-html">Курс по верстке</option>
 												<option value="course-js">
@@ -131,7 +131,7 @@ const Edit = () => {
 				
 			</div>
 		</div>
-     );
+    );
 }
- 
+
 export default Edit;

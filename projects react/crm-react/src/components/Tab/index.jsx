@@ -1,8 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 const Tab = () => {
+	const [users, setUsers] = useState()
+
+	const someData = fetch('http://localhost:8000/users')
+	.then(res => res.json())
+	.then(data => console.log(data))
+	console.log(someData);
+
     useEffect(()=> {
         document.body.className = "with-nav body--dashboard"
-    })
+    }, [])
     return (
         <>
             <div className="left-panel blue-skin">
@@ -80,10 +87,10 @@ const Tab = () => {
 						
 						<div className="col">
 							<div id="topStatusBar" className="btn-group" role="group" aria-label="...">
-								<a href="#" className="btn btn-light" data-value="all">Все</a>
-								<a href="#" className="btn btn-light" data-value="new">Новые</a>
-								<a href="#" className="btn btn-light" data-value="inwork">В работе</a>
-								<a href="#" className="btn btn-light" data-value="complete">Завершенные</a>
+								<button href="#" className="btn btn-light" data-value="all">Все</button>
+								<button href="#" className="btn btn-light" data-value="new">Новые</button>
+								<button href="#" className="btn btn-light" data-value="inwork">В работе</button>
+								<button href="#" className="btn btn-light" data-value="complete">Завершенные</button>
 							</div>
 						</div>
 						
@@ -129,7 +136,7 @@ const Tab = () => {
 								<a href="edit.html">Редактировать</a>
 							</td>
 						</tr>
-						<tr>
+						{/* <tr>
 							<th scope="row">2</th>
 							<td>01.04.2020</td>
 							<td>Курс по верстке</td>
@@ -142,8 +149,8 @@ const Tab = () => {
 							<td>
 								<a href="edit.html">Редактировать</a>
 							</td>
-						</tr>
-						<tr>
+						</tr> */}
+						{/* <tr>
 							<th scope="row">1</th>
 							<td>01.04.2020</td>
 							<td>Курс по верстке</td>
@@ -156,7 +163,7 @@ const Tab = () => {
 							<td>
 								<a href="edit.html">Редактировать</a>
 							</td>
-						</tr>
+						</tr> */}
 					</tbody>
 				</table>
 			</div>
